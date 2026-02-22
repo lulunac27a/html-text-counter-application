@@ -8,5 +8,5 @@ calculateButton.addEventListener("click", () => {
     const words =
         textContent.trim() === "" ? 0 : textContent.trim().split(/\s+/).length; //calculate number of words
     const lines = textContent.split("\n").length; //calculate number of lines
-    outputText.innerText = `Characters: ${characters}\nWords: ${words}\nLines: ${lines}`; //update output text area
+    outputText.innerText = `Characters: ${Intl.NumberFormat("en-US").format(characters)}\nWords: ${Intl.NumberFormat("en-US").format(words)}\nLines: ${Intl.NumberFormat("en-US").format(lines)}`; //update output text area
 });
